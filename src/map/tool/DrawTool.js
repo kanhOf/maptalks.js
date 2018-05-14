@@ -466,7 +466,7 @@ class DrawTool extends MapTool {
         const path = [clickCoords[0]];
         for (let i = 1, len = clickCoords.length; i < len; i++) {
             if (clickCoords[i].x !== clickCoords[i - 1].x || clickCoords[i].y !== clickCoords[i - 1].y) {
-                path.push(i);
+                path.push(clickCoords[i]);
             }
         }
         if (path.length < 2 || (this._geometry && (this._geometry instanceof Polygon) && path.length < 3)) {
